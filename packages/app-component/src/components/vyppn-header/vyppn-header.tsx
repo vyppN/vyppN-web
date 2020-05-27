@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component,  h } from '@stencil/core';
 
 @Component({
   tag: 'vyppn-header',
@@ -9,9 +9,14 @@ export class VyppnHeader {
 
   render() {
     return (
-      <Host>
-        <slot></slot>
-      </Host>
+      <metro-row align={'center'}>
+        <h1>NC</h1>
+        <metro-horizontal-space space={10} />
+        <metro-column>
+          <metro-xlarge>Nattapol Chitinsiyanon</metro-xlarge>
+          <metro-medium>Full stack developer</metro-medium>
+        </metro-column>
+      </metro-row>
     );
   }
 

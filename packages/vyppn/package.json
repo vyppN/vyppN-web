@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "deploy": "npm run export; firebase deploy",
+    "export": "next build; next export",
     "build": "next build",
     "start": "next start"
   },
