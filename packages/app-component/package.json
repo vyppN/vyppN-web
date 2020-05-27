@@ -1,6 +1,6 @@
 {
   "name": "app-component",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha.0",
   "description": "Stencil Component Starter",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -22,7 +22,7 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "metro-components": "0.0.1"
+    "metro-components": "^0.0.1-alpha.0"
   },
   "devDependencies": {
     "@stencil/core": "^1.12.2",
