@@ -132,6 +132,12 @@ const GlobalStyle = createGlobalStyle`
     font-style: italic;
 }
 
+@font-face {
+    font-family: 'PT Mono';
+    src: url('/static/fonts/PTMono-Regular.ttf') format('truetype');
+}
+
+
 html{
 height: 100%;
 }

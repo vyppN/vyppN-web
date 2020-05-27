@@ -1,10 +1,10 @@
-import {Grey04, Orange} from '@libs/elements/colors/Color/colors.element'
+import {Grey04, Orange, Yellow, Green} from '@libs/elements/colors/Color/colors.element'
 import Column from '@libs/elements/containers/Column/column.element'
 import Row from '@libs/elements/containers/Row/row.element'
 import Hover from '@libs/elements/hover/hover.element'
 import Image from '@libs/elements/image/Image/image.element'
+import Large from '@libs/elements/paragraphs/body/large.element'
 import Small from '@libs/elements/paragraphs/body/small.element'
-import XLarge from '@libs/elements/paragraphs/body/x-large.element'
 import Jumbo from '@libs/elements/paragraphs/header/jumbo.element'
 import HorizontalSpace from '@libs/elements/spacing/Spacer/horizontal/horizontal'
 import VerticalSpace from '@libs/elements/spacing/Spacer/vertical/vertical'
@@ -19,19 +19,30 @@ const MenuItem = ({title}) => {
     )
 }
 
-const BottomImage = ({source}) => {
-    return <Image source={`/static/images/${source}`} style={{height: 60}}/>
+const BottomImage = ({source, ...props}) => {
+    return <Image source={`/static/images/${source}`} style={{height: 60, ...props.style}}/>
 }
 
 const HomeLayout = () => {
     return (
         <Column alignItems={'flex-start'} justifyContent={'center'}
                 style={{width: '100%', height: '100vh', position: 'relative'}}>
-            <XLarge style={{alignSelf:'center'}}><ExtraLight><Grey04>{'<'}vyppN{'/>'}</Grey04></ExtraLight></XLarge>
-            <VerticalSpace height={16}/>
-            <Row alignItems={'center'} style={{width: 'auto',alignSelf:'center'}}>
-                <Image source={'/static/images/kanoon.png'} style={{zIndex:-1,height:200}}/>
-                <Column >
+
+            <Row alignItems={'center'} style={{width: 'auto', alignSelf: 'center'}}>
+                <Image source={'/static/images/kanoon.png'} style={{zIndex: -1, height: 200}}/>
+                <Column>
+                    <Row>
+                        <HorizontalSpace width={40}/>
+                        <Large style={{alignSelf: 'flex-start', fontFamily: 'PT Mono', fontSize: '1.3em'}}>
+                            <ExtraLight>
+                                <Yellow>{'<vyppN '}</Yellow>
+                                <Grey04>{'description={'}</Grey04>
+                                <Green>'I<Orange>\'</Orange>m a full stack developer'</Green>
+                                <Grey04>{'}'}</Grey04>
+                                <Yellow>{'/>'}</Yellow>
+                            </ExtraLight>
+                        </Large>
+                    </Row>
                     <Row>
                         <HorizontalSpace width={40}/>
                         <Jumbo style={{fontSize: '5.5em'}}>
@@ -54,19 +65,19 @@ const HomeLayout = () => {
                     </Row>
                 </Column>
             </Row>
-
-
-            <Row padding={'0 16'} justifyContent={'flex-end'} style={{position: 'absolute', bottom: 50}}>
-                <BottomImage source={'firebase.png'} />
+            <Row padding={'0 16'} justifyContent={'flex-end'} alignItems={'center'}
+                 style={{position: 'absolute', bottom: 50}}>
+                <BottomImage source={'circleci.png'}/>
                 <HorizontalSpace width={32}/>
-                <BottomImage source={'next-js-logo.png'}/>
+                <BottomImage source={'firebase.png'}/>
                 <HorizontalSpace width={32}/>
-                <BottomImage source={'ts.png'}/>
+                <BottomImage source={'next-js-logo.png'} style={{filter: 'invert(100%)'}}/>
+                <HorizontalSpace width={32}/>
+                <BottomImage source={'ts.png'} style={{filter: 'invert(100%)', height: 45}}/>
             </Row>
             <Row padding={'0 16'} justifyContent={'flex-end'} style={{position: 'absolute', bottom: 16}}>
                 <Thin>&copy; 2020 by Nattapol Chitinsiyanon. All rights reserved.</Thin>
             </Row>
-
         </Column>
     )
 }
