@@ -3,6 +3,7 @@ import Head from 'next/head'
 import React from 'react'
 import {defineCustomElements,applyPolyfills} from 'app-component/loader'
 import '../src/loader'
+import GlobalStyle from '../src/components/elements/global-style'
 
 
 export default class extends App {
@@ -20,7 +21,10 @@ export default class extends App {
                 <Head>
                     <title>Nattapol Chitinsiyanon</title>
                 </Head>
-                <Component {...pageProps} />
+                <>
+                    <GlobalStyle/>
+                    <Component {...pageProps} />
+                </>
             </>
         )
     }
