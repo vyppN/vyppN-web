@@ -1,0 +1,11 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "bootstrap": "lerna clean -y; lerna bootstrap --hoist",
+    "run:dev": "npm run --prefix packages/vyppn dev"
+  },
+  "devDependencies": {
+    "lerna": "^3.21.0"
+  }
+}
