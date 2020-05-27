@@ -22,7 +22,7 @@ module.exports = withTranspileModule(
             // for absolute import
             // according to https://github.com/zeit/next-plugins/issues/535#issuecomment-553413523
             config.resolve.modules.push(__dirname)
-
+            console.log(config)
             return config
         },
         // env: {

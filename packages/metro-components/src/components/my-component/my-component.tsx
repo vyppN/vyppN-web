@@ -18,6 +18,7 @@ export class MyComponent {
         <metro-large>ไก่กับไข่อะไรเกิดก่อน</metro-large>
         <metro-larger>ไก่กับไข่อะไรเกิดก่อน</metro-larger>
         <metro-xlarge>ไก่กับไข่อะไรเกิดก่อน</metro-xlarge>
+        <metro-image source={'http://dsfad.xdf/image.png'} errorImage={'http://dsfad.com/image.png'} width={40}/>
       </metro-column>
     )
   }

@@ -16,7 +16,7 @@ module.exports = api => {
                 'root': ['.'],
                 'alias': {
                     '~': './src',
-                    '@libs': 'share-libs/src',
+                    '@libs': '../share-libs/src',
                 }
             }
             ],

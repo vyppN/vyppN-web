@@ -16,6 +16,12 @@ export namespace Components {
     interface MetroHorizontalSpace {
         "space": number;
     }
+    interface MetroImage {
+        "errorImage": string;
+        "height": string | number;
+        "source": string;
+        "width": string | number;
+    }
     interface MetroLarge {
     }
     interface MetroLarger {
@@ -59,6 +65,12 @@ declare global {
     var HTMLMetroHorizontalSpaceElement: {
         prototype: HTMLMetroHorizontalSpaceElement;
         new (): HTMLMetroHorizontalSpaceElement;
+    };
+    interface HTMLMetroImageElement extends Components.MetroImage, HTMLStencilElement {
+    }
+    var HTMLMetroImageElement: {
+        prototype: HTMLMetroImageElement;
+        new (): HTMLMetroImageElement;
     };
     interface HTMLMetroLargeElement extends Components.MetroLarge, HTMLStencilElement {
     }
@@ -124,6 +136,7 @@ declare global {
         "metro-bold": HTMLMetroBoldElement;
         "metro-column": HTMLMetroColumnElement;
         "metro-horizontal-space": HTMLMetroHorizontalSpaceElement;
+        "metro-image": HTMLMetroImageElement;
         "metro-large": HTMLMetroLargeElement;
         "metro-larger": HTMLMetroLargerElement;
         "metro-medium": HTMLMetroMediumElement;
@@ -146,6 +159,12 @@ declare namespace LocalJSX {
     }
     interface MetroHorizontalSpace {
         "space"?: number;
+    }
+    interface MetroImage {
+        "errorImage"?: string;
+        "height"?: string | number;
+        "source"?: string;
+        "width"?: string | number;
     }
     interface MetroLarge {
     }
@@ -175,6 +194,7 @@ declare namespace LocalJSX {
         "metro-bold": MetroBold;
         "metro-column": MetroColumn;
         "metro-horizontal-space": MetroHorizontalSpace;
+        "metro-image": MetroImage;
         "metro-large": MetroLarge;
         "metro-larger": MetroLarger;
         "metro-medium": MetroMedium;
@@ -194,6 +214,7 @@ declare module "@stencil/core" {
             "metro-bold": LocalJSX.MetroBold & JSXBase.HTMLAttributes<HTMLMetroBoldElement>;
             "metro-column": LocalJSX.MetroColumn & JSXBase.HTMLAttributes<HTMLMetroColumnElement>;
             "metro-horizontal-space": LocalJSX.MetroHorizontalSpace & JSXBase.HTMLAttributes<HTMLMetroHorizontalSpaceElement>;
+            "metro-image": LocalJSX.MetroImage & JSXBase.HTMLAttributes<HTMLMetroImageElement>;
             "metro-large": LocalJSX.MetroLarge & JSXBase.HTMLAttributes<HTMLMetroLargeElement>;
             "metro-larger": LocalJSX.MetroLarger & JSXBase.HTMLAttributes<HTMLMetroLargerElement>;
             "metro-medium": LocalJSX.MetroMedium & JSXBase.HTMLAttributes<HTMLMetroMediumElement>;

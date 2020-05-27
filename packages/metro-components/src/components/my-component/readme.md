@@ -18,6 +18,7 @@
 - [metro-large](../metro-large)
 - [metro-larger](../metro-larger)
 - [metro-xlarge](../metro-xlarge)
+- [metro-image](../metro-image)
 
 ### Graph
 ```mermaid
@@ -31,6 +32,7 @@ graph TD;
   my-component --> metro-large
   my-component --> metro-larger
   my-component --> metro-xlarge
+  my-component --> metro-image
   metro-xsmall --> metro-text
   metro-small --> metro-text
   metro-medium --> metro-text

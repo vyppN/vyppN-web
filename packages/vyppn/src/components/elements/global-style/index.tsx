@@ -1,6 +1,8 @@
+import {WHITE} from '@libs/constants/colors'
 import {createGlobalStyle} from 'styled-components'
-import {APP_BACKGROUND_COLOR} from '../../constants/colors'
-import FontWeight from 'share-libs/src/constants/font'
+import {APP_BACKGROUND_COLOR} from '~/components/constants/colors'
+import FontWeight from '@libs/enums/font-weight'
+
 
 const GlobalStyle = createGlobalStyle`
 
@@ -130,12 +132,24 @@ const GlobalStyle = createGlobalStyle`
     font-style: italic;
 }
 
+html{
+height: 100%;
+}
+
 body{
 padding: 0;
 margin: 0;
 background-color: ${APP_BACKGROUND_COLOR};
 font-family: 'Montserrat',sans-serif;
 font-weight: ${FontWeight.regular};
+color: ${WHITE};
+min-height: 100%;
+-webkit-touch-callout: none; /* iOS Safari */
+-webkit-user-select: none; /* Safari */
+-moz-user-select: none; /* Old versions of Firefox */
+-ms-user-select: none; /* Internet Explorer/Edge */
+user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
 }
 `
+
 export default GlobalStyle

@@ -1,10 +1,5 @@
+import withNoSSR from '@libs/helpers/ssr/withNoSSR'
 import React from 'react'
-import {BACKGROUND} from '../src/components/constants/colors'
+import HomeLayout from '~/components/layouts/home'
 
-const Home = () => {
-    return (
-        <vyppn-header/>
-    )
-}
-
-export default Home
+export default withNoSSR(HomeLayout)

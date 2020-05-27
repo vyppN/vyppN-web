@@ -1,4 +1,15 @@
 {
   "name": "share-libs",
-  "version": "0.0.1-alpha.1"
+  "version": "0.0.1-alpha.1",
+  "dependencies": {
+    "next": "9.4.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "styled-components": "^5.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.35",
+    "@types/styled-components": "^5.1.0",
+    "typescript": "^3.9.3"
+  }
 }

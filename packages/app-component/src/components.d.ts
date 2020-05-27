@@ -7,6 +7,8 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface VyppnHeader {
+        "errorImage": string;
+        "source": string;
     }
 }
 declare global {
@@ -22,6 +24,8 @@ declare global {
 }
 declare namespace LocalJSX {
     interface VyppnHeader {
+        "errorImage"?: string;
+        "source"?: string;
     }
     interface IntrinsicElements {
         "vyppn-header": VyppnHeader;
