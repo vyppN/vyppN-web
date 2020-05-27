@@ -1,5 +1,6 @@
 import {createGlobalStyle} from 'styled-components'
 import {APP_BACKGROUND_COLOR} from '../../constants/colors'
+import FontWeight from 'share-libs/src/constants/font'
 
 const GlobalStyle = createGlobalStyle`
 
@@ -28,6 +29,20 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Montserrat';
     src: url('/static/fonts/Montserrat-BoldItalic.ttf') format('truetype');
     font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/static/fonts/Montserrat-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/static/fonts/Montserrat-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
     font-style: italic;
 }
 
@@ -120,6 +135,7 @@ padding: 0;
 margin: 0;
 background-color: ${APP_BACKGROUND_COLOR};
 font-family: 'Montserrat',sans-serif;
+font-weight: ${FontWeight.regular};
 }
 `
 export default GlobalStyle
