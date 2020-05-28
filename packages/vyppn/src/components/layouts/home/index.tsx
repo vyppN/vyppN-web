@@ -5,6 +5,8 @@ import Hover from '@libs/elements/hover/hover.element'
 import Image from '@libs/elements/image/Image/image.element'
 import Large from '@libs/elements/paragraphs/body/large.element'
 import Small from '@libs/elements/paragraphs/body/small.element'
+import Text from '@libs/elements/paragraphs/body/text.element'
+import XSmall from '@libs/elements/paragraphs/body/x-small.element'
 import Jumbo from '@libs/elements/paragraphs/header/jumbo.element'
 import HorizontalSpace from '@libs/elements/spacing/Spacer/horizontal/horizontal'
 import VerticalSpace from '@libs/elements/spacing/Spacer/vertical/vertical'
@@ -33,7 +35,7 @@ const HomeLayout = () => {
                 <Column>
                     <Row>
                         <HorizontalSpace width={40}/>
-                        <Large style={{alignSelf: 'flex-start', fontFamily: 'PT Mono', fontSize: '1.3em'}}>
+                        <Text style={{alignSelf: 'flex-start', fontFamily: 'PT Mono', fontSize: '1.1em'}}>
                             <ExtraLight>
                                 <Yellow>{'<vyppN '}</Yellow>
                                 <Grey04>{'description={'}</Grey04>
@@ -41,13 +43,23 @@ const HomeLayout = () => {
                                 <Grey04>{'}'}</Grey04>
                                 <Yellow>{'/>'}</Yellow>
                             </ExtraLight>
-                        </Large>
+                        </Text>
                     </Row>
+                    <VerticalSpace height={10}/>
                     <Row>
                         <HorizontalSpace width={40}/>
-                        <Jumbo style={{fontSize: '5.5em'}}>
-                            <ExtraLight>Nattapol Chitinsiyanon</ExtraLight>
-                        </Jumbo>
+                        <XSmall style={{fontFamily: 'PT Mono',whiteSpace:'pre'}}>
+                            {`
+888888ba             dP     dP                              dP     a88888b. dP       oo   dP   oo                   oo                                              
+88    \`8b            88     88                              88    d8'   \`88 88            88                                                                        
+88     88 .d8888b. d8888P d8888P .d8888b. 88d888b. .d8888b. 88    88        88d888b. dP d8888P dP 88d888b. .d8888b. dP dP    dP .d8888b. 88d888b. .d8888b. 88d888b. 
+88     88 88'  \`88   88     88   88'  \`88 88'  \`88 88'  \`88 88    88        88'  \`88 88   88   88 88'  \`88 Y8ooooo. 88 88    88 88'  \`88 88'  \`88 88'  \`88 88'  \`88 
+88     88 88.  .88   88     88   88.  .88 88.  .88 88.  .88 88    Y8.   .88 88    88 88   88   88 88    88       88 88 88.  .88 88.  .88 88    88 88.  .88 88    88 
+dP     dP \`88888P8   dP     dP   \`88888P8 88Y888P' \`88888P' dP     Y88888P' dP    dP dP   dP   dP dP    dP \`88888P' dP \`8888P88 \`88888P8 dP    dP \`88888P' dP    dP 
+                                          88                                                                                .88                                     
+                                          dP                                                                            d8888P`}
+                        </XSmall>
+
                     </Row>
                     <Row justifyContent={'flex-end'} style={{marginTop: -16}}>
                         <Small><Light><Orange>明智人</Orange></Light></Small>
