@@ -1,3 +1,5 @@
+import {Colors} from '@libs/constants/color-palette'
+import Color from '@libs/elements/colors/Color/color.element'
 import {Grey04, Orange, Yellow, Green} from '@libs/elements/colors/Color/colors.element'
 import Column from '@libs/elements/containers/Column/column.element'
 import Row from '@libs/elements/containers/Row/row.element'
@@ -17,7 +19,7 @@ import React from 'react'
 
 const MenuItem = ({title}) => {
     return (
-        <Hover brightness={120} pointer><Light><Grey04>{title}</Grey04></Light></Hover>
+        <Hover scale={1.1} brightness={120} pointer><Light><Grey04>{title}</Grey04></Light></Hover>
     )
 }
 
@@ -62,14 +64,14 @@ dP     dP \`88888P8   dP     dP   \`88888P8 88Y888P' \`88888P' dP     Y88888P' d
 
                     </Row>
                     <Row justifyContent={'flex-end'} style={{marginTop: -16}}>
-                        <Small><Light><Orange>明智人</Orange></Light></Small>
+                        <Small><Light><Color color={Colors.Orange.orange_20}>明智人</Color></Light></Small>
                         <HorizontalSpace width={8}/>
                         <Grey04>|</Grey04>
                         <HorizontalSpace width={8}/>
-                        <Small><Light><Orange>ナッタポン・シチンシヤノン</Orange></Light></Small>
+                        <Small><Light><Color color={Colors.Orange.orange_20}>ナッタポン・シチンシヤノン</Color></Light></Small>
                     </Row>
                     <VerticalSpace height={30}/>
-                    <Row justifyContent={'space-evenly'}>
+                    <Row justifyContent={'space-evenly'} style={{overflow:'visible'}}>
                         <MenuItem title={'ABOUT ME'}/>
                         <MenuItem title={'EDUCATION'}/>
                         <MenuItem title={'PORTFOLIO'}/>
