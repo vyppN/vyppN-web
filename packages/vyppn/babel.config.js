@@ -9,7 +9,8 @@ module.exports = api => {
         ],
         'plugins': [
             [
-                '@babel/plugin-proposal-decorators', {'legacy': true}
+                '@babel/plugin-proposal-decorators',
+                {'legacy': true}
             ],
             [
                 'module-resolver', {
@@ -20,7 +21,14 @@ module.exports = api => {
                 }
             }
             ],
-            ['emotion']
+            ['emotion'],
+            [
+                'styled-components',
+                {
+                    'ssr':true,
+                    'minified':false
+                }
+            ]
         ]
     }
 }

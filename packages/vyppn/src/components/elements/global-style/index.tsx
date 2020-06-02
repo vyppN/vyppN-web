@@ -143,6 +143,7 @@ height: 100%;
 }
 
 body{
+overflow-x: hidden;
 padding: 0;
 margin: 0;
 background-color: ${APP_BACKGROUND_COLOR};

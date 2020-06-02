@@ -19,13 +19,16 @@ import {MediumBold} from '@libs/elements/styles/font-weight/medium-bold.element'
 import {SemiBold} from '@libs/elements/styles/font-weight/semi-bold.element'
 import {Thin} from '@libs/elements/styles/font-weight/thin.element'
 import React from 'react'
+import {Path} from '~/enums/path'
+import usePage from '~/modules/page/usePage'
 
 const ElementsView = () => {
+    const page = usePage()
     return (
         <Column padding={20}>
             <Row>
                 <Column>
-                    <Larger><Yellow>Paragraphs: </Yellow></Larger>
+                    <Larger onClick={()=>page.setPage(Path.home)}><Yellow>Paragraphs: </Yellow></Larger>
                     <VerticalSpace height={10}/>
                     <XLarge>Nattapol Chitinsiyanon</XLarge>
                     <Larger>Nattapol Chitinsiyanon</Larger>
